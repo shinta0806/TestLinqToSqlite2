@@ -16,8 +16,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TestLinqToSqlite2.BasicDatabase
 {
-	// 複数個のインデックスを作成する場合は [Index(nameof(Height))] のように注釈を追加する
-	// 複合インデックスを作成する場合は [Index(nameof(Name), nameof(Height))] のように 1 つの注釈で複数のカラムを記載する
 	[Table("t_test")]
 	[Index(nameof(Name), IsUnique = true)]
 	internal class TTestData
