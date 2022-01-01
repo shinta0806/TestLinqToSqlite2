@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestLinqToSqlite2"
         mc:Ignorable="d"
-        Title="Test LINQ to SQLite 2" ResizeMode="NoResize" SizeToContent="WidthAndHeight" >
+        Title="Test LINQ to SQLite Gen 2" ResizeMode="NoResize" SizeToContent="WidthAndHeight" >
     <StackPanel Orientation="Horizontal" Margin="20,10,20,20" >
         <GroupBox Header="基本操作" >
             <StackPanel Width="100" Margin="20" >
