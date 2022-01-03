@@ -49,7 +49,19 @@ namespace TestLinqToSqlite2.BasicDatabase
 			{
 				DataSource = "Test.sqlite3",
 			};
-			using SqliteConnection sqliteConnection = new(stringBuilder.ToString());
+			SqliteConnection sqliteConnection = new(stringBuilder.ToString());
+
+#if false
+			// インメモリデータベースの場合は接続を Open() しておく必要があります。（データベースの寿命に注意）
+			SqliteConnectionStringBuilder stringBuilder = new()
+			{
+				DataSource = "Test.sqlite3",
+				Mode = SqliteOpenMode.Memory,
+				Cache = SqliteCacheMode.Shared,
+			};
+			SqliteConnection sqliteConnection = new(stringBuilder.ToString());
+			sqliteConnection.Open();
+#endif
 
 #if false
 			// EF Core ではデフォルトでジャーナルモードが WAL になっています。DELETE にしたい場合は以下を実行します。
